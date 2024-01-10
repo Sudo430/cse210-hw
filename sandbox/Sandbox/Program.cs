@@ -5,11 +5,10 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Sandbox World!");
-        Console.Write("enter a string >>");
+        Console.Write("enter an intager >>");
         string input = Console.ReadLine();
-        if (input == "no"){
-            Console.WriteLine("Don't tell me no");
-        }
-        Console.WriteLine($"\n{input}");
+
+        Console.WriteLine($"{input} + 5 = {int.Parse(input) + 5}");
+
     }
 }
