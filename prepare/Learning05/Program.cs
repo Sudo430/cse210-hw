@@ -13,6 +13,7 @@ class Program
 
         Console.Clear();
         foreach(Shape shape in shapes){
+            
             Console.WriteLine($"Shape Name: {shape.GetName()}");
             Console.WriteLine($"Shape Color: {shape.GetColor()}");
             Console.WriteLine($"Shape Area: {shape.GetArea()}");

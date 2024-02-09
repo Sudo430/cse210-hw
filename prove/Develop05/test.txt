@@ -1,0 +1,6 @@
+115
+SimpleGoal,,test,,this is atest,,50,,True
+SimpleGoal,,test2,,another test,,50,,True
+SimpleGoal,,test3,,this is another test3,,1,,False
+EternalGoal,,eternal,,testing this,,5
+ChecklistGoal,,checklisttest,,a nother test,,10,,5,,100,,1
