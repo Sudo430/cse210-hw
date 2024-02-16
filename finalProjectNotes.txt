@@ -1,0 +1,50 @@
+Final Project for CSE 210
+
+Daily Planner
+
+fetures
+    mamage events(add, remove, edit)
+    daily todo list(add, remove, edit, mark as complete)
+    display the schedule
+    save and load to a file.
+
+
+events types
+    standard
+        -title
+        -description
+        -location optional
+        -date
+        -start time
+        -end time
+
+    holeday
+        -title
+        -description
+        -date
+    birthday
+        -peronsName
+        -date
+
+    repeating - weekly
+        -title
+        -description
+        -days  sun, tues, weds, etc
+        -start time
+        -end time
+
+todo
+    task
+        -title
+        -description
+        -dueDate
+        -isComplete
+    Daily Task
+        -title
+        -description
+        -isComplete
+    Weekly Task
+        -title
+        -description
+        -isComplete
+        -days sun, tues, weds, etc
