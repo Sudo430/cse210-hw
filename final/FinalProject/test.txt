@@ -1,0 +1,3 @@
+Event┌Test┌this is just a test┌700┌800
+Event┌test2┌a second test┌1200┌1400
+Event┌test3┌a third test┌1000┌1100

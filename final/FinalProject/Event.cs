@@ -15,8 +15,12 @@ class Event{
         _description = description;
     }
 
-    public string renderEvent(){
-        return $"{_title} {_startTime} to {_endTime}";
+    public string RenderEvent(){
+        
+        return $"{_startTime, 4} -> {_endTime, 4} : {_title.ToUpper(), -15} : {_description}";
+    }
+    virtual public string ExportEvent(){
+        return $"Event┌{_title}┌{_description}┌{_startTime}┌{_endTime}";
     }
 
     //setters
