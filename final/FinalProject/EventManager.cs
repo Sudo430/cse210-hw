@@ -22,8 +22,8 @@ class EventManager{
             
 
             foreach(Event E in _eventList){
-                File.WriteLine(E.ExportEvent());
-                
+                File.WriteLine(E.GetType() + E.ExportEvent());
+                Console.WriteLine(E.GetType());
             }
         }
     }
@@ -58,8 +58,49 @@ class EventManager{
         Console.Write(">>");
         int endTime = int.Parse(Console.ReadLine());
 
+
+        Console.WriteLine("Do you want to make this event repeat?(Y/N)");
+        string repeat = Console.ReadLine();
+
+        if(repeat.ToUpper() == "Y"){
+            string[] days = {"sun","mon","tue","wed","thur","fri","sat",};
+            
+
+            do{
+                Console.Clear();
+                
+                foreach(string day in days){
+                    Console.Write(day + " ");
+                }
+                //TODO finish this
+                int input = int.Parse(Console.ReadLine());
+                for(int i = 0; i < days.Length; i++){
+                    if(input == i){
+                        if(days[i] == days[i].ToUpper()){
+                            days[i] = days[i].ToLower();
+                        }
+                        else{
+                            days[i] = days[i].ToUpper();
+                        }
+                    }
+                }
+
+                
+                if(input > 7 ){
+                    break;
+                }
+
+
+            }while(true);
+
+            Console.WriteLine(days);
+        }
+        else{
+            _eventList.Add(new Event(title, description, startTime, endTime));
+        }
+
         //TODO add repeating events
-        _eventList.Add(new Event(title, description, startTime, endTime));
+        //_eventList.Add(new Event(title, description, startTime, endTime));
         Console.Clear();
 
     }

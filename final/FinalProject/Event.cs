@@ -20,7 +20,7 @@ class Event{
         return $"{_startTime, 4} -> {_endTime, 4} : {_title.ToUpper(), -15} : {_description}";
     }
     virtual public string ExportEvent(){
-        return $"Event┌{_title}┌{_description}┌{_startTime}┌{_endTime}";
+        return $"┌{_title}┌{_description}┌{_startTime}┌{_endTime}";
     }
 
     //setters
@@ -40,5 +40,6 @@ class Event{
     public int GetStartTime(){
         return _startTime;
     }
+
 
 }
