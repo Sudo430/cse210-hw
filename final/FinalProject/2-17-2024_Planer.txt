@@ -1,0 +1,2 @@
+RepeatingEvent┌test┌test┌1200┌1300┌SUN,mon,TUE,wed,THU,fri,sat,,,
+Event┌test┌just a test┌900┌1000

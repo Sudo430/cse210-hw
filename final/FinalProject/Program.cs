@@ -1,6 +1,5 @@
 using System;
 
-using System.Text.Json;
 
 class Program{
     static void Main(string[] args){
@@ -8,7 +7,12 @@ class Program{
         string input;
 
         EventManager eventManager = new EventManager();
+        DateTime dateTime = DateTime.Now;
         Console.Clear();
+
+        string dayOfWeek = dateTime.DayOfWeek.ToString();
+        string date = dateTime.Date.ToShortDateString().Replace("/", "-");
+        Console.WriteLine($"{dayOfWeek[..3]} {date}");
 
         do{
             Console.WriteLine("1. Display Events");
@@ -28,7 +32,7 @@ class Program{
                     eventManager.NewEvent();
                     break;
                 case "3":
-                    eventManager.SaveEvents();
+                    eventManager.SaveEvents(date);
                     break;
                 case "4":
                     eventManager.LoadEvents();
