@@ -1,0 +1,1 @@
+RepeatingTask┌retest┌repeating test┌False┌SUN,MON,TUE,wed,thu,fri,sat

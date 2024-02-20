@@ -1,7 +1,7 @@
 class Task{
-    string _title;
-    string _description;
-    bool _isComplete;
+    protected string _title;
+    protected string _description;
+    protected bool _isComplete;
     public Task(string title, string description, bool isComplete){
         _title = title;
         _description = description;
@@ -33,14 +33,14 @@ class Task{
 
     public string RenderTask(){
         if(IsComplete()){
-            return $"[X] {_title}";
+            return $"[X] : {_title, -15} : {_description}";
         }
         else{
-            return $"[ ] {_title}";
+            return $"[ ] : {_title, -15} : {_description}";
         }
     }
 
     virtual public string ExportToString(){
-        return "";
+        return $"{_title}┌{_description}┌{_isComplete}";
     }
 }

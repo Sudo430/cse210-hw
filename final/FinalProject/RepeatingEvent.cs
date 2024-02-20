@@ -7,12 +7,7 @@ class RepeatingEvent : Event{
     }
 
     override public string ExportEvent(){
-
-        string daysInString = "";
-        foreach(string day in _repeatDays){
-            daysInString += $"{day},";
-        }
-        daysInString = daysInString.Remove(daysInString.Length);
+        string daysInString = string.Join(",", _repeatDays);
         return $"┌{_title}┌{_description}┌{_startTime}┌{_endTime}┌{daysInString}";
     }
 

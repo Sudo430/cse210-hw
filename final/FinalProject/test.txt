@@ -1,1 +1,3 @@
-RepeatingEvent┌test┌test┌1200┌1300┌SUN,mon,TUE,wed,THU,fri,sat,
+RepeatingEvent┌test┌test┌1200┌1300┌SUN,mon,TUE,wed,THU,fri,sat
+RepeatingEvent┌testw┌testw┌1200┌1300┌SUN,mon,TUE,wed,THU,fri,sat
+Event┌test3┌just a test┌900┌1000

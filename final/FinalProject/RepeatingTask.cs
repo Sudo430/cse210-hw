@@ -6,8 +6,9 @@ class RepeatingTask : Task{
     }
 
     public override string ExportToString()
-    {
-        return "";
+    {   
+        string daysInString = string.Join(",", _repeatDays);
+        return $"{_title}┌{_description}┌{_isComplete}┌{daysInString}";
     }
 
     public List<string> GetRepeatingDays(){
