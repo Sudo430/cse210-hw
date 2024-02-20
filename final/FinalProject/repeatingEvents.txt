@@ -1,0 +1,2 @@
+RepeatingEvent┌test2┌secondtest┌1200┌1300┌sun,MON,TUE,wed,thu,FRI,sat
+RepeatingEvent┌not today┌test┌1700┌1900┌sun,MON,tue,wed,THU,FRI,sat

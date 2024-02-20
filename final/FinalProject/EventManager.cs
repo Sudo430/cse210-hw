@@ -1,12 +1,6 @@
-using System.Globalization;
-using System.Reflection.Metadata;
-using System.Security.Cryptography;
-
 class EventManager{
-    List<Event> _eventList = new List<Event>();
+    private List<Event> _eventList = new List<Event>();
     private string _repeatingEventFilename = "repeatingEvents.txt";
-
-
 
     public void DisplayEvents(){
         Console.Clear();
@@ -24,8 +18,6 @@ class EventManager{
     }
     public void SaveEvents(string date){
 
-        //TODO have it make it's own file name with the date
-        //Console.Write("Please enter a filename to save to >> ");
         string fileName = $"{date}_Planer.txt";
         
 
@@ -46,11 +38,12 @@ class EventManager{
                     File.WriteLine(type + E.ExportEvent());
                 }
                 else if(type == "RepeatingEvent"){
-                    File.WriteLine(type + E.ExportEvent());
+                    RFile.WriteLine(type + E.ExportEvent());
                 }
                 
             }
         }
+        Console.Clear();
     }
     public void LoadEvents(int intDay, string strDay, string date){
 
@@ -98,7 +91,6 @@ class EventManager{
     }
     public void NewEvent(){
         Console.Clear();
-        //TODO add a length limit
         Console.WriteLine("Please enter a title.");
         Console.Write(">>");
         string title = Console.ReadLine();
@@ -181,7 +173,7 @@ class EventManager{
         else if(editEvent[0] == "Event"){
             _eventList[input] = new Event(title,description,int.Parse(startTime), int.Parse(endTime));
         }
-
+        Console.Clear();
     }
     public void DeleteEvent(){
         DisplayEvents();
@@ -196,7 +188,7 @@ class EventManager{
         int input = int.Parse(strInput);
 
         _eventList.Remove(_eventList[input]);
-
+        Console.Clear();
 
     }
 

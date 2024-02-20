@@ -37,12 +37,22 @@ class TaskManager{
                 
             }
         }
+        Console.Clear();
 
     }
     public void LoadTasks(int intDay,string strDay, string date){
+        Console.Clear();
+        Console.WriteLine("Leave blank to load default filename or enter filename to load.");
+        Console.WriteLine("This will also overwrite any unsaved changes. Enter 'A' to abort.");
+        Console.Write(">>");
+        string fileName = Console.ReadLine();
 
-
-        string fileName = $"{date}_Tasks.txt";
+        if(fileName == ""){
+            fileName = $"{date}_Planer.txt";  
+        }
+        else if(fileName.ToUpper() =="A"){
+            return;
+        }
         string[] lines = System.IO.File.ReadAllLines(fileName);
 
         _todaysTasks.Clear();
@@ -67,6 +77,7 @@ class TaskManager{
 
     }
     public void NewTask(){
+        Console.Clear();
         Console.WriteLine("Enter a title.");
         Console.Write(">>");
         string title = Console.ReadLine();
@@ -83,7 +94,7 @@ class TaskManager{
         else{
             _todaysTasks.Add(new Task(title, description, false));
         }
-        
+        Console.Clear();
 
     }
     public void EditTask(){
@@ -126,7 +137,7 @@ class TaskManager{
         else{
             _todaysTasks[int.Parse(inputStr)] = new Task(title, description, isComplete);
         }
-
+        Console.Clear();
 
 
 
@@ -141,7 +152,7 @@ class TaskManager{
             return;
         }
         _todaysTasks.Remove(_todaysTasks[int.Parse(inputStr)]);
-
+        Console.Clear();
     }
 
     public void MarkComplete(){

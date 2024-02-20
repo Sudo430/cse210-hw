@@ -1,6 +1,6 @@
 
 class RepeatingEvent : Event{
-    List<string> _repeatDays;
+    private List<string> _repeatDays;
 
     public RepeatingEvent(string title, string description, int startTime, int endTime, List<string> days) : base(title, description, startTime,endTime){
         _repeatDays = days;

@@ -15,7 +15,6 @@ class Program{
         string dayStr = dateTime.DayOfWeek.ToString()[..3];
 
         string date = dateTime.Date.ToShortDateString().Replace("/", "-");
-        Console.WriteLine($"{dayStr} {date}");
 
 
         string tasksOrEvents = "Events";

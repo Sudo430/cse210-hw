@@ -1,5 +1,5 @@
 class RepeatingTask : Task{
-    List<string> _repeatDays;
+    private List<string> _repeatDays;
 
     public RepeatingTask(string title, string description, bool isComplete, List<string> days): base(title, description,isComplete){
         _repeatDays = days;
